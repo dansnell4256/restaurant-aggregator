@@ -1,0 +1,27 @@
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+.DS_Store
+
+# Sensitive configuration files
+**/*.jks
+**/*.p12
+**/*.keystore
+**/*.truststore
+**/application-local.properties
+infrastructure/.env
+**/secrets/**
+**/credentials/**
+
+# Exclude all property files that might contain credentials
+**/src/main/resources/application-dev.properties
+**/src/main/resources/application-prod.properties

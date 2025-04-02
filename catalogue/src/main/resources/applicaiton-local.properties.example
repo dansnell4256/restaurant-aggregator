@@ -1,0 +1,9 @@
+# Local development configuration - rename to application-local.properties
+# and add your credentials
+
+# Database credentials - DO NOT COMMIT actual credentials
+spring.datasource.url=jdbc:h2:mem:catalogue-db
+spring.datasource.driverClassName=org.h2.Driver
+# These should be set in your environment or in your actual local properties file
+# SPRING_DATASOURCE_USERNAME=your_username
+# SPRING_DATASOURCE_PASSWORD=your_password

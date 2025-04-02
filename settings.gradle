@@ -1,0 +1,6 @@
+rootProject.name = 'restaurant-aggregator'
+// Include all subprojects
+include 'common'
+include 'catalogue'
+include 'menu'
+include 'orders'

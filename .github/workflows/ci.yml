@@ -1,4 +1,4 @@
-name: Resturant Aggregator CI
+name: Restaurant Aggregator CI
 
 on:
   push:
@@ -23,6 +23,12 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
+      - name: Run linting
+        run: |
+          ./gradlew checkstyleMain checkstyleTest
+          ./gradlew spotbugsMain spotbugsTest
+          ./gradlew pmdMain pmdTest
+
       - name: Build with Gradle
         run: ./gradlew build
 
@@ -35,3 +41,13 @@ jobs:
         with:
           name: test-results
           path: '**/build/test-results/test/TEST-*.xml'
+
+      - name: Upload lint reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lint-reports
+          path: |
+            **/build/reports/checkstyle/
+            **/build/reports/spotbugs/
+            **/build/reports/pmd/

@@ -53,8 +53,8 @@ subprojects {
     spotbugs {
         toolVersion = '4.8.2'  // Latest version as of April 2025
         ignoreFailures = false
-        effort = "max"
-        reportLevel = "medium"
+        effort = com.github.spotbugs.snom.Effort.MAX  // Using the enum constant instead of string
+        reportLevel = com.github.spotbugs.snom.Confidence.MEDIUM  // Also needs to use an enum
     }
 
     spotbugsMain {

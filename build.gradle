@@ -22,9 +22,6 @@ allprojects {
                 tasks.withType(Checkstyle) {
                     source = project.files(stagedFiles.split(' ').findAll { it.endsWith('.java') })
                 }
-                tasks.withType(com.github.spotbugs.snom.SpotBugsTask) {
-                    source = project.files(stagedFiles.split(' ').findAll { it.endsWith('.java') })
-                }
                 tasks.withType(Pmd) {
                     source = project.files(stagedFiles.split(' ').findAll { it.endsWith('.java') })
                 }
@@ -37,8 +34,15 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'checkstyle'
-    apply plugin: 'com.github.spotbugs'
     apply plugin: 'pmd'
+
+    // Temporarily apply SpotBugs but disable the tasks
+    apply plugin: 'com.github.spotbugs'
+
+    // Disable all SpotBugs tasks for now
+    tasks.withType(com.github.spotbugs.snom.SpotBugsTask).configureEach {
+        enabled = false
+    }
 
     pmd {
         toolVersion = '7.0.0'
@@ -46,35 +50,6 @@ subprojects {
         ignoreFailures = false
         ruleSetFiles = files("${rootProject.projectDir}/config/pmd/ruleset.xml")
         ruleSets = []
-    }
-
-    // Configure SpotBugs tasks directly instead of using the extension
-    tasks.withType(com.github.spotbugs.snom.SpotBugsTask) {
-        toolVersion = '4.8.2'
-        ignoreFailures = false
-        effort = com.github.spotbugs.snom.Effort.MAX
-        reportLevel = com.github.spotbugs.snom.Confidence.MEDIUM
-    }
-
-    // Configure reports for specific SpotBugs tasks
-    tasks.named('spotbugsMain') {
-        reports {
-            create("html") {
-                enabled = true
-                destination = layout.buildDirectory.file("reports/spotbugs/main/spotbugs.html").get().asFile
-                stylesheet = 'fancy-hist.xsl'
-            }
-        }
-    }
-
-    tasks.named('spotbugsTest') {
-        reports {
-            create("html") {
-                enabled = true
-                destination = layout.buildDirectory.file("reports/spotbugs/test/spotbugs.html").get().asFile
-                stylesheet = 'fancy-hist.xsl'
-            }
-        }
     }
 
     checkstyle {

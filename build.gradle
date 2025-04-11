@@ -33,31 +33,31 @@ allprojects {
     }
 }
 
-
-
 subprojects {
     apply plugin: 'java'
     apply plugin: 'io.spring.dependency-management'
-    apply plugin: 'checkstyle' // Add this line
+    apply plugin: 'checkstyle'
     apply plugin: 'com.github.spotbugs'
     apply plugin: 'pmd'
 
     pmd {
-        toolVersion = '7.0.0'  // Latest version as of April 2025
+        toolVersion = '7.0.0'
         consoleOutput = true
         ignoreFailures = false
         ruleSetFiles = files("${rootProject.projectDir}/config/pmd/ruleset.xml")
         ruleSets = []
     }
 
-    spotbugs {
-        toolVersion = '4.8.2'  // Latest version as of April 2025
+    // Configure SpotBugs tasks directly instead of using the extension
+    tasks.withType(com.github.spotbugs.snom.SpotBugsTask) {
+        toolVersion = '4.8.2'
         ignoreFailures = false
-        effort = com.github.spotbugs.snom.Effort.MAX  // Using the enum constant instead of string
-        reportLevel = com.github.spotbugs.snom.Confidence.MEDIUM  // Also needs to use an enum
+        effort = com.github.spotbugs.snom.Effort.MAX
+        reportLevel = com.github.spotbugs.snom.Confidence.MEDIUM
     }
 
-    spotbugsMain {
+    // Configure reports for specific SpotBugs tasks
+    tasks.named('spotbugsMain') {
         reports {
             create("html") {
                 enabled = true
@@ -67,7 +67,7 @@ subprojects {
         }
     }
 
-    spotbugsTest {
+    tasks.named('spotbugsTest') {
         reports {
             create("html") {
                 enabled = true
@@ -78,7 +78,7 @@ subprojects {
     }
 
     checkstyle {
-        toolVersion = '10.12.3'  // Latest version as of April 2025
+        toolVersion = '10.12.3'
         configFile = file("${rootDir}/config/checkstyle/checkstyle.xml")
         maxWarnings = 0
         ignoreFailures = false

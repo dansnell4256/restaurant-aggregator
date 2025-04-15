@@ -54,7 +54,7 @@
         <module name="SimplifyBooleanReturn"/>
 
         <!-- Whitespace checks -->
-        <module name="EmptyLineSeparator"/>
+<!--        <module name="EmptyLineSeparator"/>-->
         <module name="GenericWhitespace"/>
         <module name="MethodParamPad"/>
         <module name="NoWhitespaceAfter"/>

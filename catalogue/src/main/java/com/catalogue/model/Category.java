@@ -3,9 +3,13 @@ package com.catalogue.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 import com.common.model.TenantEntity;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "categories")
@@ -20,10 +24,10 @@ public class Category extends TenantEntity {
     @Column(columnDefinition = "boolean default true")
     private Boolean active;
 
-//    @OneToMany(mappedBy = "category")
-//    private Set<CategoryItem> categoryItems = new HashSet<>();
+    @OneToMany(mappedBy = "category")
+    private Set<CategoryItem> categoryItems = new HashSet<>();
 
-    // Getters and setters
+//     Getters and setters
     public String getName() {
         return name;
     }
@@ -56,11 +60,11 @@ public class Category extends TenantEntity {
         this.active = active;
     }
 
-//    public Set<CategoryItem> getCategoryItems() {
-//        return categoryItems;
-//    }
-//
-//    public void setCategoryItems(Set<CategoryItem> categoryItems) {
-//        this.categoryItems = categoryItems;
-//    }
+    public Set<CategoryItem> getCategoryItems() {
+        return categoryItems;
+    }
+
+    public void setCategoryItems(Set<CategoryItem> categoryItems) {
+        this.categoryItems = categoryItems;
+    }
 }

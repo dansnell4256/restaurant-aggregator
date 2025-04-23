@@ -1,12 +1,11 @@
 package com.catalogue.model;
 
 
+import com.common.model.TenantEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-
-import com.common.model.TenantEntity;
 
 import java.util.HashSet;
 import java.util.Set;

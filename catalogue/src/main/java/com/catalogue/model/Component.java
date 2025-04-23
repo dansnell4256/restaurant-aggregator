@@ -1,15 +1,14 @@
 package com.catalogue.model;
 
-import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.Set;
-
+import com.common.model.TenantEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
-import com.common.model.TenantEntity;
+import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "components")

@@ -1,11 +1,5 @@
 package com.catalogue.service;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.catalogue.dto.CategoryDTO;
 import com.catalogue.dto.CategoryItemSummaryDTO;
 import com.catalogue.exception.DuplicateResourceException;
@@ -14,6 +8,11 @@ import com.catalogue.model.Category;
 import com.catalogue.model.CategoryItem;
 import com.catalogue.repository.CategoryRepository;
 import com.common.tenant.TenantContextHolder;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional

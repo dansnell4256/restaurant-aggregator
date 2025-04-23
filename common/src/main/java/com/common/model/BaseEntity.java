@@ -8,6 +8,7 @@ import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import java.time.LocalDateTime;
 
+
 @SuppressWarnings("PMD.AbstractClassWithoutAbstractMethod")
 @MappedSuperclass
 public abstract class BaseEntity {

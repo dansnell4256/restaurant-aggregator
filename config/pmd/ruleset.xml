@@ -24,6 +24,7 @@
         <exclude name="AbstractNaming"/>
         <exclude name="UselessParentheses"/>
         <exclude name="TooManyStaticImports"/>
+        <exclude name="UnnecessaryConstructor"/>
     </rule>
 
     <!-- Error prone -->
@@ -59,5 +60,6 @@
         <exclude name="TooManyMethods"/>
         <exclude name="CyclomaticComplexity"/>
         <exclude name="DataClass"/>
+        <exclude name="UseUtilityClass"/>
     </rule>
 </ruleset>

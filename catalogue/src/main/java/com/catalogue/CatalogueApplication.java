@@ -8,10 +8,10 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan({"com.catalogue", "com.common"})
 @EntityScan({"com.catalogue.model", "com.common.model"})
-public final class CatalogueApplication {
+public class CatalogueApplication {
 
-    private CatalogueApplication() {
-        // Private constructor to prevent instantiation
+    public CatalogueApplication() {
+
     }
 
     public static void main(String[] args) {

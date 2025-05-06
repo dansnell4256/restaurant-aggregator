@@ -1,0 +1,744 @@
+{
+  "tenants": [
+    {
+      "id": "american-grill",
+      "name": "American Grill",
+      "description": "Classic American cuisine featuring lunch and dinner options"
+    },
+    {
+      "id": "italian-bistro",
+      "name": "Italian Bistro",
+      "description": "Simple Italian restaurant with authentic cuisine"
+    }
+  ],
+  "categories": [
+    {
+      "tenantId": "american-grill",
+      "name": "Appetizers",
+      "description": "Starters to share",
+      "displayOrder": 1,
+      "active": true
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Salads",
+      "description": "Fresh greens and more",
+      "displayOrder": 2,
+      "active": true
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Sandwiches",
+      "description": "Handcrafted sandwiches",
+      "displayOrder": 3,
+      "active": true
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Burgers",
+      "description": "Premium beef burgers",
+      "displayOrder": 4,
+      "active": true
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Entrees",
+      "description": "Main dishes",
+      "displayOrder": 5,
+      "active": true
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Sides",
+      "description": "Accompaniments",
+      "displayOrder": 6,
+      "active": true
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Cocktails",
+      "description": "Handcrafted cocktails",
+      "displayOrder": 7,
+      "active": true
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Wine",
+      "description": "Curated wine selection",
+      "displayOrder": 8,
+      "active": true
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Antipasti",
+      "description": "Italian starters",
+      "displayOrder": 1,
+      "active": true
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Pasta",
+      "description": "Handmade pasta dishes",
+      "displayOrder": 2,
+      "active": true
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Secondi",
+      "description": "Main courses",
+      "displayOrder": 3,
+      "active": true
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Contorni",
+      "description": "Side dishes",
+      "displayOrder": 4,
+      "active": true
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Vini",
+      "description": "Italian wines",
+      "displayOrder": 5,
+      "active": true
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Cocktail",
+      "description": "Italian-inspired cocktails",
+      "displayOrder": 6,
+      "active": true
+    }
+  ],
+  "components": [
+    {
+      "tenantId": "american-grill",
+      "name": "Beef Patty",
+      "description": "Premium ground beef",
+      "cost": 2.50,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Cheddar Cheese",
+      "description": "Sharp cheddar cheese",
+      "cost": 0.75,
+      "isAllergenic": true,
+      "allergenInfo": "Contains dairy"
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Lettuce",
+      "description": "Fresh iceberg lettuce",
+      "cost": 0.25,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Tomato",
+      "description": "Sliced tomato",
+      "cost": 0.25,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Pickle",
+      "description": "Dill pickle slices",
+      "cost": 0.25,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Onion",
+      "description": "Red onion",
+      "cost": 0.25,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Bacon",
+      "description": "Applewood smoked bacon",
+      "cost": 1.00,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Brioche Bun",
+      "description": "Toasted brioche bun",
+      "cost": 0.50,
+      "isAllergenic": true,
+      "allergenInfo": "Contains gluten, eggs, dairy"
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "French Fries",
+      "description": "Crispy fries",
+      "cost": 1.50,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Mozzarella Cheese",
+      "description": "Fresh mozzarella",
+      "cost": 1.00,
+      "isAllergenic": true,
+      "allergenInfo": "Contains dairy"
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Chicken Wings",
+      "description": "Chicken wingettes",
+      "cost": 2.00,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Buffalo Sauce",
+      "description": "Spicy buffalo sauce",
+      "cost": 0.50,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Ranch Dressing",
+      "description": "Creamy ranch",
+      "cost": 0.50,
+      "isAllergenic": true,
+      "allergenInfo": "Contains dairy, eggs"
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "BBQ Sauce",
+      "description": "Sweet and tangy BBQ sauce",
+      "cost": 0.50,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Bourbon",
+      "description": "Kentucky bourbon",
+      "cost": 2.00,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "White Wine",
+      "description": "Chardonnay",
+      "cost": 3.00,
+      "isAllergenic": false,
+      "allergenInfo": "Contains sulfites"
+    },
+    {
+      "tenantId": "american-grill",
+      "name": "Red Wine",
+      "description": "Cabernet Sauvignon",
+      "cost": 3.00,
+      "isAllergenic": false,
+      "allergenInfo": "Contains sulfites"
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Pasta Dough",
+      "description": "Fresh egg pasta",
+      "cost": 1.00,
+      "isAllergenic": true,
+      "allergenInfo": "Contains gluten, eggs"
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Tomato Sauce",
+      "description": "San Marzano tomato sauce",
+      "cost": 1.00,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Parmesan Cheese",
+      "description": "Aged Parmigiano-Reggiano",
+      "cost": 1.25,
+      "isAllergenic": true,
+      "allergenInfo": "Contains dairy"
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Olive Oil",
+      "description": "Extra virgin olive oil",
+      "cost": 0.50,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Garlic",
+      "description": "Fresh garlic",
+      "cost": 0.25,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Beef",
+      "description": "Ground beef",
+      "cost": 2.00,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Pancetta",
+      "description": "Cured pork belly",
+      "cost": 1.50,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Chicken Breast",
+      "description": "Boneless chicken breast",
+      "cost": 2.00,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Prosecco",
+      "description": "Italian sparkling wine",
+      "cost": 3.00,
+      "isAllergenic": false,
+      "allergenInfo": "Contains sulfites"
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Limoncello",
+      "description": "Lemon liqueur",
+      "cost": 2.00,
+      "isAllergenic": false,
+      "allergenInfo": null
+    },
+    {
+      "tenantId": "italian-bistro",
+      "name": "Campari",
+      "description": "Italian bitter liqueur",
+      "cost": 2.00,
+      "isAllergenic": false,
+      "allergenInfo": null
+    }
+  ],
+  "categoryItems": [
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Appetizers",
+      "name": "Buffalo Wings",
+      "description": "Crispy chicken wings tossed in spicy buffalo sauce, served with ranch dressing",
+      "basePrice": 12.99,
+      "imageUrl": "buffalo-wings.jpg",
+      "sku": "APP-001",
+      "displayOrder": 1,
+      "active": true,
+      "components": ["Chicken Wings", "Buffalo Sauce", "Ranch Dressing"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Appetizers",
+      "name": "Mozzarella Sticks",
+      "description": "Breaded mozzarella sticks served with marinara sauce",
+      "basePrice": 9.99,
+      "imageUrl": "mozzarella-sticks.jpg",
+      "sku": "APP-002",
+      "displayOrder": 2,
+      "active": true,
+      "components": ["Mozzarella Cheese"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Appetizers",
+      "name": "Loaded Fries",
+      "description": "French fries topped with cheddar cheese, bacon, and green onions",
+      "basePrice": 10.99,
+      "imageUrl": "loaded-fries.jpg",
+      "sku": "APP-003",
+      "displayOrder": 3,
+      "active": true,
+      "components": ["French Fries", "Cheddar Cheese", "Bacon"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Salads",
+      "name": "House Salad",
+      "description": "Mixed greens, tomatoes, cucumbers, and red onions with your choice of dressing",
+      "basePrice": 8.99,
+      "imageUrl": "house-salad.jpg",
+      "sku": "SAL-001",
+      "displayOrder": 1,
+      "active": true,
+      "components": ["Lettuce", "Tomato", "Onion"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Salads",
+      "name": "Caesar Salad",
+      "description": "Romaine lettuce, croutons, and Caesar dressing topped with parmesan cheese",
+      "basePrice": 9.99,
+      "imageUrl": "caesar-salad.jpg",
+      "sku": "SAL-002",
+      "displayOrder": 2,
+      "active": true,
+      "components": ["Lettuce"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Sandwiches",
+      "name": "Club Sandwich",
+      "description": "Turkey, bacon, lettuce, tomato, and mayo on toasted white bread",
+      "basePrice": 13.99,
+      "imageUrl": "club-sandwich.jpg",
+      "sku": "SAN-001",
+      "displayOrder": 1,
+      "active": true,
+      "components": ["Lettuce", "Tomato", "Bacon"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Sandwiches",
+      "name": "BLT",
+      "description": "Bacon, lettuce, and tomato with mayo on toasted bread",
+      "basePrice": 11.99,
+      "imageUrl": "blt.jpg",
+      "sku": "SAN-002",
+      "displayOrder": 2,
+      "active": true,
+      "components": ["Bacon", "Lettuce", "Tomato"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Burgers",
+      "name": "Classic Cheeseburger",
+      "description": "Beef patty with cheddar cheese, lettuce, tomato, onion, and pickle on a brioche bun",
+      "basePrice": 14.99,
+      "imageUrl": "cheeseburger.jpg",
+      "sku": "BUR-001",
+      "displayOrder": 1,
+      "active": true,
+      "components": ["Beef Patty", "Cheddar Cheese", "Lettuce", "Tomato", "Onion", "Pickle", "Brioche Bun"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Burgers",
+      "name": "Bacon Burger",
+      "description": "Beef patty with bacon, cheddar cheese, lettuce, tomato, and mayo on a brioche bun",
+      "basePrice": 16.99,
+      "imageUrl": "bacon-burger.jpg",
+      "sku": "BUR-002",
+      "displayOrder": 2,
+      "active": true,
+      "components": ["Beef Patty", "Bacon", "Cheddar Cheese", "Lettuce", "Tomato", "Brioche Bun"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Entrees",
+      "name": "BBQ Ribs",
+      "description": "Slow-cooked ribs glazed with BBQ sauce, served with fries and coleslaw",
+      "basePrice": 19.99,
+      "imageUrl": "bbq-ribs.jpg",
+      "sku": "ENT-001",
+      "displayOrder": 1,
+      "active": true,
+      "components": ["BBQ Sauce", "French Fries"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Entrees",
+      "name": "Grilled Chicken",
+      "description": "Grilled chicken breast with seasonal vegetables",
+      "basePrice": 16.99,
+      "imageUrl": "grilled-chicken.jpg",
+      "sku": "ENT-002",
+      "displayOrder": 2,
+      "active": true,
+      "components": []
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Sides",
+      "name": "French Fries",
+      "description": "Crispy golden fries",
+      "basePrice": 4.99,
+      "imageUrl": "french-fries.jpg",
+      "sku": "SID-001",
+      "displayOrder": 1,
+      "active": true,
+      "components": ["French Fries"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Sides",
+      "name": "Onion Rings",
+      "description": "Crispy battered onion rings",
+      "basePrice": 5.99,
+      "imageUrl": "onion-rings.jpg",
+      "sku": "SID-002",
+      "displayOrder": 2,
+      "active": true,
+      "components": ["Onion"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Cocktails",
+      "name": "Old Fashioned",
+      "description": "Bourbon, sugar, bitters",
+      "basePrice": 11.99,
+      "imageUrl": "old-fashioned.jpg",
+      "sku": "COC-001",
+      "displayOrder": 1,
+      "active": true,
+      "components": ["Bourbon"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Cocktails",
+      "name": "Manhattan",
+      "description": "Bourbon, sweet vermouth, bitters",
+      "basePrice": 12.99,
+      "imageUrl": "manhattan.jpg",
+      "sku": "COC-002",
+      "displayOrder": 2,
+      "active": true,
+      "components": ["Bourbon"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Wine",
+      "name": "House Chardonnay",
+      "description": "Glass of Chardonnay",
+      "basePrice": 8.99,
+      "imageUrl": "chardonnay.jpg",
+      "sku": "WIN-001",
+      "displayOrder": 1,
+      "active": true,
+      "components": ["White Wine"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryName": "Wine",
+      "name": "House Cabernet",
+      "description": "Glass of Cabernet Sauvignon",
+      "basePrice": 8.99,
+      "imageUrl": "cabernet.jpg",
+      "sku": "WIN-002",
+      "displayOrder": 2,
+      "active": true,
+      "components": ["Red Wine"]
+    },
+    {
+      "tenantId": "italian-bistro",
+      "categoryName": "Antipasti",
+      "name": "Bruschetta",
+      "description": "Toasted bread topped with tomatoes, garlic, and basil",
+      "basePrice": 8.99,
+      "imageUrl": "bruschetta.jpg",
+      "sku": "ANT-001",
+      "displayOrder": 1,
+      "active": true,
+      "components": ["Garlic", "Olive Oil"]
+    },
+    {
+      "tenantId": "italian-bistro",
+      "categoryName": "Antipasti",
+      "name": "Caprese Salad",
+      "description": "Fresh mozzarella, tomatoes, and basil with balsamic glaze",
+      "basePrice": 10.99,
+      "imageUrl": "caprese.jpg",
+      "sku": "ANT-002",
+      "displayOrder": 2,
+      "active": true,
+      "components": ["Mozzarella Cheese", "Tomato", "Olive Oil"]
+    },
+    {
+      "tenantId": "italian-bistro",
+      "categoryName": "Pasta",
+      "name": "Spaghetti Bolognese",
+      "description": "Spaghetti with meat sauce",
+      "basePrice": 15.99,
+      "imageUrl": "spaghetti-bolognese.jpg",
+      "sku": "PAS-001",
+      "displayOrder": 1,
+      "active": true,
+      "components": ["Pasta Dough", "Tomato Sauce", "Beef", "Parmesan Cheese"]
+    },
+    {
+      "tenantId": "italian-bistro",
+      "categoryName": "Pasta",
+      "name": "Fettuccine Alfredo",
+      "description": "Fettuccine pasta in a creamy Alfredo sauce",
+      "basePrice": 14.99,
+      "imageUrl": "fettuccine-alfredo.jpg",
+      "sku": "PAS-002",
+      "displayOrder": 2,
+      "active": true,
+      "components": ["Pasta Dough", "Parmesan Cheese"]
+    },
+    {
+      "tenantId": "italian-bistro",
+      "categoryName": "Pasta",
+      "name": "Carbonara",
+      "description": "Spaghetti with pancetta, eggs, and Parmesan cheese",
+      "basePrice": 16.99,
+      "imageUrl": "carbonara.jpg",
+      "sku": "PAS-003",
+      "displayOrder": 3,
+      "active": true,
+      "components": ["Pasta Dough", "Pancetta", "Parmesan Cheese"]
+    },
+    {
+      "tenantId": "italian-bistro",
+      "categoryName": "Secondi",
+      "name": "Chicken Parmigiana",
+      "description": "Breaded chicken breast topped with tomato sauce and mozzarella",
+      "basePrice": 18.99,
+      "imageUrl": "chicken-parm.jpg",
+      "sku": "SEC-001",
+      "displayOrder": 1,
+      "active": true,
+      "components": ["Chicken Breast", "Tomato Sauce", "Mozzarella Cheese", "Parmesan Cheese"]
+    },
+    {
+      "tenantId": "italian-bistro",
+      "categoryName": "Secondi",
+      "name": "Chicken Marsala",
+      "description": "Chicken breast sautéed with mushrooms and Marsala wine",
+      "basePrice": 19.99,
+      "imageUrl": "chicken-marsala.jpg",
+      "sku": "SEC-002",
+      "displayOrder": 2,
+      "active": true,
+      "components": ["Chicken Breast"]
+    },
+    {
+      "tenantId": "italian-bistro",
+      "categoryName": "Contorni",
+      "name": "Roasted Potatoes",
+      "description": "Herb-roasted potatoes",
+      "basePrice": 5.99,
+      "imageUrl": "roasted-potatoes.jpg",
+      "sku": "CON-001",
+      "displayOrder": 1,
+      "active": true,
+      "components": ["Garlic", "Olive Oil"]
+    },
+    {
+      "tenantId": "italian-bistro",
+      "categoryName": "Contorni",
+      "name": "Sautéed Spinach",
+      "description": "Spinach sautéed with garlic and olive oil",
+      "basePrice": 6.99,
+      "imageUrl": "sauteed-spinach.jpg",
+      "sku": "CON-002",
+      "displayOrder": 2,
+      "active": true,
+      "components": ["Garlic", "Olive Oil"]
+    },
+    {
+      "tenantId": "italian-bistro",
+      "categoryName": "Vini",
+      "name": "Chianti",
+      "description": "Glass of Chianti",
+      "basePrice": 9.99,
+      "imageUrl": "chianti.jpg",
+      "sku": "VIN-001",
+      "displayOrder": 1,
+      "active": true,
+      "components": ["Red Wine"]
+    },
+    {
+      "tenantId": "italian-bistro",
+      "categoryName": "Vini",
+      "name": "Pinot Grigio",
+      "description": "Glass of Pinot Grigio",
+      "basePrice": 8.99,
+      "imageUrl": "pinot-grigio.jpg",
+      "sku": "VIN-002",
+      "displayOrder": 2,
+      "active": true,
+      "components": ["White Wine"]
+    },
+    {
+      "tenantId": "italian-bistro",
+      "categoryName": "Cocktail",
+      "name": "Negroni",
+      "description": "Gin, Campari, and sweet vermouth",
+      "basePrice": 11.99,
+      "imageUrl": "negroni.jpg",
+      "sku": "COC-001",
+      "displayOrder": 1,
+      "active": true,
+      "components": ["Campari"]
+    },
+    {
+      "tenantId": "italian-bistro",
+      "categoryName": "Cocktail",
+      "name": "Limoncello Spritz",
+      "description": "Limoncello, Prosecco, and soda water",
+      "basePrice": 10.99,
+      "imageUrl": "limoncello-spritz.jpg",
+      "sku": "COC-002",
+      "displayOrder": 2,
+      "active": true,
+      "components": ["Limoncello", "Prosecco"]
+    }
+  ],
+  "categoryItemCustomizations": [
+    {
+      "tenantId": "american-grill",
+      "categoryItemName": "Buffalo Wings",
+      "name": "Extra Sauce",
+      "priceAdjustment": 1.00,
+      "active": true,
+      "components": ["Buffalo Sauce"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryItemName": "Classic Cheeseburger",
+      "name": "Add Bacon",
+      "priceAdjustment": 2.00,
+      "active": true,
+      "components": ["Bacon"]
+    },
+    {
+      "tenantId": "american-grill",
+      "categoryItemName": "Classic Cheeseburger",
+      "name": "Extra Cheese",
+      "priceAdjustment": 1.00,
+      "active": true,
+      "components": ["Cheddar Cheese"]
+    },
+    {
+      "tenantId": "italian-bistro",
+      "categoryItemName": "Spaghetti Bolognese",
+      "name": "Extra Parmesan",
+      "priceAdjustment": 1.00,
+      "active": true,
+      "components": ["Parmesan Cheese"]
+    },
+    {
+      "tenantId": "italian-bistro",
+      "categoryItemName": "Chicken Parmigiana",
+      "name": "Extra Sauce",
+      "priceAdjustment": 1.00,
+      "active": true,
+      "components": ["Tomato Sauce"]
+    }
+  ]
+}

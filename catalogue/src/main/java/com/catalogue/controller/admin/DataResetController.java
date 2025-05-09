@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/api/v1/admin")
-@Profile({"dev", "test"})
+@Profile({"dev", "test", "local"}) // Added "local" profile
 public class DataResetController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DataResetController.class);
@@ -37,11 +37,29 @@ public class DataResetController {
         ResponseEntity<ApiResponse<Void>> response;
 
         try {
-            sampleDataLoader.run(new String[0]);
+            LOGGER.info("Beginning data reset process");
+
+            // Call loadSampleData() directly instead of run()
+            sampleDataLoader.loadSampleData();
+
+            LOGGER.info("Sample data reset successfully");
+
             response = ResponseEntity.ok(ApiResponse.success("Sample data reset successfully", null));
         } catch (Exception e) {
             LOGGER.error("Error resetting sample data", e);
-            response = ResponseEntity.internalServerError()
+
+            // Log detailed error information
+            LOGGER.error("Error type: {}", e.getClass().getName());
+            LOGGER.error("Error message: {}", e.getMessage());
+
+            // Check for nested exceptions
+            if (e.getCause() != null) {
+                LOGGER.error("Root cause: {} - {}",
+                        e.getCause().getClass().getName(), e.getCause().getMessage());
+            }
+
+            // Return error response without additional data
+            response = ResponseEntity.status(500)
                     .body(ApiResponse.error(500, "Error resetting sample data: " + e.getMessage()));
         }
 

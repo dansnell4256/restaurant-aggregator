@@ -48,7 +48,7 @@ public class ApiResponse<T> {
     }
 
     /**
-     * Error response factory method.
+     * Error response factory method without data.
      *
      * @param <T> Type of the data
      * @param status HTTP status code
@@ -57,6 +57,19 @@ public class ApiResponse<T> {
      */
     public static <T> ApiResponse<T> error(int status, String message) {
         return new ApiResponse<>(status, message, null);
+    }
+
+    /**
+     * Error response factory method with data.
+     *
+     * @param <T> Type of the data
+     * @param status HTTP status code
+     * @param message Error message
+     * @param data Error data
+     * @return ApiResponse instance
+     */
+    public static <T> ApiResponse<T> error(int status, String message, T data) {
+        return new ApiResponse<>(status, message, data);
     }
 
     // Getters and setters
